@@ -1,0 +1,355 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title>Home | Wonderful Garden></title>
+		<link rel="shortcut icon" href="images/logos/favicon.ico" >
+		<meta name="description" content="">
+		
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap3.3.1/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+		
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+		
+		<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+	</head>
+
+	<body>
+	
+		<div class="container" id="home">
+
+			<nav class="navbar navbar-default" role="navigation">
+	  			<div class="container-fluid">
+	    		<!-- Brand and toggle get grouped for better mobile display -->
+
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="Index.jsp"><img src="images/logos/logo1.png" alt="Your Logo"></a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="MenuOrder.jsp">Menu&amp;Order<span class="sr-only">(current)</span></a></li>
+			        <li><a href="Contact.jsp">Contact Us</a></li>
+			        <li><a href="About.jsp">About Us</a></li>
+			      </ul>
+			      <ul class="nav navbar-nav navbar-right">
+					<li><a href="Signup.jsp" class="btn btn-default btn-link">Create Account</a></li>
+			  		<li><strong class="myBar">|</strong></li>
+			  		<li><a href="Login.jsp" class="btn btn-default btn-link">Login</a></li>
+				  </ul> <!-- end navbar-right-->
+				  <p class="navbar-text navbar-right">Items in Cart: ${userCart.size()}</p>
+				  <p class="navbar-text navbar-right" id="messageFont">${loggedInMessage}</p>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav><!-- end navbar -->
+
+
+			<!-- begin menuHeader -->
+			<div class="row" id="menuHeader">
+					<div class="col-12">
+						<div class="text-center">
+							<div class="page-header">
+							
+								<div class="btn-group" role="group">
+				  					<div class="btn-group" role="group">
+				    					<a href="MenuOrder.jsp" type="button" class="btn btn-large btn-warning">Appetizers</a>
+				  					</div>
+				  					
+				  					<div class="btn-group" role="group">
+										<a href="MenuOrder.jsp" type="button" class="btn btn-large btn-info">Lunch</a>
+				  					</div>
+
+				  					<div class="btn-group" role="group">
+										<a href="MenuOrder.jsp" type="button" class="btn btn-large btn-warning">Dinner</a>
+				  					</div>
+								</div><!--end btn-group-->
+
+							</div><!--page-header-->
+						</div><!--text-center-->
+					</div><!--end col-12-->
+			</div><!--end menuHeader-->
+		
+	<div class="carousel slide" id="myCarousel">
+	
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+			<li data-slide-to="1" data-target="#myCarousel"></li>
+			<li data-slide-to="2" data-target="#myCarousel"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			<div class="item active" id="slide1">
+				<div class="carousel-caption">
+					<h4>Authentic Chinese Cuisine</h4>
+					<p>Lets get your order started. Click <a href="MenuOrder.jsp" target="_blank" class="btn btn-primary">here</a> to begin.</p>
+				</div><!--end carousel-caption-->
+			</div><!--end item-->
+
+			<div class="item" id="slide2">
+				<div class="carousel-caption">
+					<h4>Choose from vegetarian, beef, pork or chicken entrees</h4>
+					<p>Click <a href="MenuOrder.jsp" target="_blank" class="btn btn-primary">here</a> to begin your order.</p>
+				</div><!-- end carousel-caption -->
+			</div><!--end item-->
+
+			<div class="item" id="slide3">
+				<div class="carousel-caption">
+					<h4>Multiple Dining Options</h4>
+					<p>You have the option to dine in, call in your order, or order by clicking <a href="MenuOrder.jsp" target="_blank" class="btn btn-primary">here</a></p>
+
+				</div><!-- end carousel-caption -->
+			</div><!--end item-->
+
+		</div><!-- carousel-inner -->
+
+		<!-- Controls -->
+		<a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+		<a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
+
+	</div> <!--end myCarousel-->
+
+
+	<div class="row" id="bigCallout">
+		<div class="col-12">
+
+			<div class="alert alert-success alert-block fade in" id="successAlert">
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+
+				<h4>Attention New Customers!</h4>
+				<p>10% off your first order when you create an account!  Create an <a href="Signup.jsp" data-original-title="Create Account!" rel="tooltip">account</a> now!</p>
+			</div><!-- end alert -->
+
+			<!-- Visible only on small devices -->
+			<div class="well well-small visible-sm">
+				<a href="" class="btn btn-large btn-block btn-default"><span class="glyphicon glyphicon-phone"></span> Give us a call!</a>
+			</div><!-- end well-small --> 
+			
+			<div class="well">
+				<div class="page-header">
+					<h1>Chefs Special of the Day</h1>
+				</div><!--end page-header-->
+				
+				<form action="OrderServlet" method="get" class="form-group">
+					<div class="row">
+						<div class="col-sm-8">
+							<p class="lead">California Noodles with Shrimp made in a mandarin curry sauce.  
+							This dish won best Noodle of the Year award consecutively in 2009, 2010 and 2011.  
+							Alot of our regular customers like to add shitake mushrooms and green onions for extra flavor.  
+							We can also add in more spices if you prefer more of a kick!  
+							New customers get 10% off their first order when they create a account.</p>
+							
+						</div>
+						
+						<div class="col-sm-4">
+							<img src="images/ChefSpecial/noodles1_large.jpeg"  alt="ChefSpecial">
+						</div>
+					</div>
+					<input type="hidden" name="portion" value="large">
+					<input type="hidden" name="quantity" value="1">
+					<input type="hidden" name="itemName" value="California Noodles">
+					<input type="hidden" name="itemPrice" value="8.99">
+					<input type="hidden" name="imageUrl" value="images/ChefSpecial/noodles1_large.jpeg">
+					<input type="hidden" name="chefSpecial" value="chefSpecial">		
+					<button type="submit" class="btn btn-large btn-primary">Order the special</button>
+					<button type="button" class="btn btn-large btn-link">View Our Full menu</button>
+				</form>		
+				
+					
+			</div><!-- end well -->
+
+		</div><!--end col-12-->
+	</div> <!--end bigCallout-->
+
+	<div class="row" id="featuresHeading">
+		<div class="col-12">
+			<h2>Check Out Our Menu</h2>
+			<p class="lead">Whether you are vegetarian or non-vegetarian, we have lots of options.</p>
+		</div><!--col-12-->
+	</div><!--end featuresHeading-->
+
+
+	<div class="row" id="features">
+
+		<div class="col-sm-4 feature">
+			<div class="panel panel-default">
+				<div class="panel-heading">Appetizers</div><!--end panel-heading-->
+				<div class="panel-body">
+					<img src="images/appetizers/potstickers.jpg"  alt="appetizer" class="img-circle">
+					<p>Something interesting about this appetizer here</p>
+					<a href="MenuOrder.jsp" class="btn btn-warning btn-block">Lets Get Grubbin</a>
+				</div>
+			</div><!--end panel panel-default-->
+		</div><!--end feature-->
+
+		<div class="col-sm-4 feature">
+			<div class="panel panel-default">
+				<div class="panel-heading">Lunch</div><!--end panel-heading-->
+				<div class="panel-body">
+					<img src="images/lunch/chicken_broccoli.jpg" alt="lunch" class="img-circle">
+					<p>Something interesting about this lunch entree here</p>
+					<a href="MenuOrder.jsp" class="btn btn-danger btn-block">Lunch Is Waiting</a>
+				</div><!-- end panel-body -->
+			</div><!--end panel panel-default-->
+		</div><!--end feature-->
+
+		<div class="col-sm-4 feature">
+			<div class="panel panel-default">
+				<div class="panel-heading">Dinner</div>
+				<div class="panel-body">
+					<img src="images/dinner/sesamechicken.jpg" alt="dinner" class="img-circle">
+					<p>Something interesting about this dinner item here</p>
+					<a href="MenuOrder.jsp" class="btn btn-info btn-block">Its Dinner Time</a>
+				</div><!--end panel-body-->
+			</div><!--end panel panel-defualt-->
+		</div><!--end feature-->
+
+	</div><!-- end features row -->
+
+<div class="row" id="moreInfo">
+	<div class="col-sm-6">
+		<h3>Map &amp; Hours of Operation</h3>
+		<div class="tabbable">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab1" data-toggle="tab">Map</a></li>
+				<li><a href="#tab2" data-toggle="tab">Hours of Operation</a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab1">
+					<h4><span class="glyphicon glyphicon-map-marker"></span> Our Location <small>2044 Springwood Rd
+					York, PA 17403</small></h4>
+
+					<iframe width="100%" height="300" 
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3059.135977180311!2d-76.692196!3d39.93834799999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c88928dc765421%3A0x641416a4ea56d250!2sWonderful+Garden+Chinese+Restaurant!5e0!3m2!1sen!2sus!4v1416027960129"></iframe>
+
+				</div><!-- end tab-pane active -->
+
+				<div class="tab-pane" id="tab2">
+
+					<h4>Hours of Operation</h4>
+
+					<table class="table table-bordered">
+  						<tr>
+  							<th>Day</th>
+  							<th>Hours</th>
+  						</tr>
+  						<tr>
+  							<td>Monday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Tuesday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Wednesday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Thursday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Friday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Saturday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+  						<tr>
+  							<td>Sunday</td>
+  							<td>10am - 10pm</td>
+  						</tr>
+
+					</table>
+					<hr>
+
+					
+					
+				</div><!--end tab-pane-->
+			</div><!-- end tab-content -->
+		</div><!-- end tabbable -->
+	</div><!-- end col-sm-6 -->
+
+		<div class="col-sm-6">
+			<h3>Come Visit Us!</h3>
+			<br>
+			<br>
+			<img src="images/storefront.jpg" alt="..." class="img-rounded">
+			<p>Wonderful Garden is conveniently located off S. Queen St. and I-83S in York, Pennsylvannia.</p>
+			<p>To offer our customers the utmost convenience we also have a drive-thru window.  So once you place your order online, you simply come thru our drive thru window to pick up your food.  Place your online order here.</p>
+		</div><!-- end col-sm-6 -->
+	
+	</div><!-- end moreInfo -->
+</div><!-- end main container -->
+
+<hr>
+		
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<h6>Copyright &copy; 2014 MS Consulting</h6>
+				</div><!--end col-sm-4 -->
+
+				<div class="col-sm-2">
+					<h6>Navigation</h6>
+						<ul class="unstyled">
+							<li><a href="Index.jsp">Home</a></li>
+							<li><a href="About.jsp">About Us</a></li>
+							<li><a href="Contact.jsp">Contact Us</a></li>
+							<li><a href="MenuOrder.jsp">Menu&amp;Order</a></li>
+						</ul>
+				</div><!--end col-sm-2-->
+
+				<div class="col-sm-4">
+					<h6>Follow Us</h6>
+						<ul class="unstyled">
+							<li><a href="#">Twitter</a></li>
+							<li><a href="#">Facebook</a></li>
+							<li><a href="#">Google Plus</a></li>
+						</ul>
+				</div><!--end col-sm-4-->
+
+				<div class="col-sm-2">
+					<h6>Coded with <span class="glyphicon glyphicon-heart"></span> by Mashhood</h6>
+				</div><!--end col-sm-2-->
+			</div><!--end row-->
+		</div>
+	</footer>
+
+	<!-- All Javascript at the bottom of the page for faster page loading -->
+		
+	<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+	
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+	
+	<!-- Bootstrap JS -->
+	<script src="bootstrap3.3.1/js/bootstrap.min.js"></script>
+	
+	<!-- Custom JS -->
+	<script src="includes/js/script.js"></script>
+	
+	</body>
+</html>

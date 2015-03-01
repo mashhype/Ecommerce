@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    
+    <!-- Website Title & Description for Search Engine purposes -->
+    <title>Checkout | Wonderful Garden></title>
+    <link rel="shortcut icon" href="images/logos/favicon.ico" >
+    <meta name="description" content="">
+    
+    <!-- Mobile viewport optimized -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Bootstrap CSS -->
+    <link href="bootstrap3.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link href="includes/css/styles.css" rel="stylesheet">
+    
+    <!-- Include Modernizr in the head, before any other Javascript -->
+    <script src="includes/js/modernizr-2.6.2.min.js"></script>
+    
+  </head>
+
+<body>
+
+  <div class="container" id="main">
+
+      <nav class="navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><img src="images/logos/logo1.png" alt="Your Logo"></a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Menu&Order<span class="sr-only">(current)</span></a></li>
+              <li><a href="Contact.html">Contact Us</a></li>
+              <li><a href="About.html">About Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+          <a href="Signup.html" class="btn btn-default btn-link">Create Account</a>
+          <strong class="myBar">|</strong>
+          <a href="Login.html" class="btn btn-default btn-link">Login</a>
+          </ul> <!-- end navbar-right-->
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav><!-- end navbar -->
+
+
+
+<!-- Begin Checkout -->
+
+<div class="container" id="checkout">
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+
+        <div class="panel-heading" role="tab" id="headingOne">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Step 1: Checkout Options
+            </a>
+          </h4>
+        </div>
+
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            <div class="row">
+              
+              <div class="col-sm-6" id="newCustomerForm">
+                
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <h3>New Customers</h3>
+
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="Register Account" checked>
+                        Register Account
+                      </label>
+                    </div>
+
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="optionsRadios" id="alertMe" value="Guest">
+                        Checkout as Guest
+                      </label>
+                      <div class="alert alert-success alert-block fade in" id="successAlert">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h4>Email Confirmation</h4>
+                        <p>Please provide us with a email to send the confirmation to.  We wont spam you, promise!</p>
+                        <label>Your Email</label>
+                        <input type="email" class="form-control" name="guestEmail" id="guestEmail" placeholder="iluvchinese@gmail.com">
+                      </div><!-- end alert -->
+                    </div>
+                      <button type="submit" class="btn btn-primary" id="currentCustomerButton">Continue</button>
+                  </div>
+                </form>
+
+              </div>
+            
+              <div class="col-sm-6">
+                
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <h3>Current Customers</h3>
+                    <label>User Name</label>
+                      <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name">
+                    <label>Password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    <div>
+                      <button type="submit" class="btn btn-primary">Continue</button>
+                    </div>
+
+                  </div>
+                </form>
+
+              </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingTwo">
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Step 2: Order Details
+          </a>
+        </h4>
+      </div>
+          
+      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+
+            <div class="row" id="rowOrderDetailsButton">
+              <a href="Cart.html" class="btn btn-warning btn-sm pull-right" id="editOrderDetailsCheckout">
+                <span class="glyphicon glyphicon-share-alt"></span>Edit Order Details
+              </a> 
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 col-sm-offset-1">
+                <h3>Menu Item</h3> 
+              </div>
+              <div class="col-sm-4 col-sm-offset-1">
+                <h3>Quantity</h3>
+              </div>
+              <div class="col-sm-2">
+                <h3>Price</h3>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="img-responsive" src="images/ChefSpecial/noodles1.jpeg">
+              </div>
+              <div class="col-sm-2">
+                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2">
+                <h4><strong>1</strong></h4>
+              </div>
+              <div class="col-sm-2">
+                <h4>$<strong>25.00</strong></h4>  
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="img-responsive" src="images/ChefSpecial/noodles1.jpeg">
+              </div>
+              <div class="col-sm-2">
+                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2">
+                <h4><strong>1</strong></h4>
+              </div>
+              <div class="col-sm-2">
+                <h4>$<strong>25.00</strong></h4>  
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-sm-2">
+                <img class="img-responsive" src="images/ChefSpecial/noodles1.jpeg">
+              </div>
+              <div class="col-sm-2">
+                <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
+              </div>
+              <div class="col-sm-4 col-sm-offset-2">
+                <h4><strong>1</strong></h4>
+              </div>
+              <div class="col-sm-2">
+                <h4>$<strong>25.00</strong></h4>  
+              </div>
+            </div>
+
+          </div><!--end panel body-->
+  
+      </div><!--end panel collapse-->
+
+    </div><!-- end panel panel default -->
+  
+    
+    <div class="panel panel-default">
+
+      <div class="panel-heading" role="tab" id="headingThree">
+        
+        <h4 class="panel-title">
+          <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Step 3: Payment Method
+          </a>
+        </h4>
+      </div>
+
+      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+        <div class="panel-body">
+      
+          <form role="form">
+
+              <div class="form-group col-sm-7">
+                <h4>Select Card Type</h4>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="mastercard" id="optionsRadios1" value="mastercard" checked>
+                    MasterCard
+                  </label>
+                </div>
+
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="visa" id="alertMe" value="visa">
+                    Visa
+                  </label>
+                </div>
+
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="amex" id="alertMe" value="amex">
+                    American Express
+                  </label>
+                </div>
+              </div><!-- end form group for radio buttons-->
+
+              <div class="form-group col-sm-3">
+                <label><h4>Total: $28.90</h4></label>
+              </div>
+
+              <div class="form-group col-sm-6">
+                <label>First Name</label>
+                <input type="text" name="fname" class="form-control" id="fname">
+              </div>
+
+              <div class="form-group col-sm-6">
+                <label>Last Name</label>
+                <input type="text" name="lname" class="form-control" id="lname">
+              </div>
+
+              <div class="form-group col-sm-5">
+                <label>Credit Card Number</label>
+                <input type="text" name="ccnum" class="form-control" id="ccnum">
+              </div>
+
+              <div class="form-group col-sm-2">
+                <label>Expiration Month</label>
+                <input type="text" name="expMonth" class="form-control" id="expMonth">
+              </div>
+
+              <div class="form-group col-sm-3">
+                <label>Expiration Year</label>
+                <input type="text" name="expYear" class="form-control" id="expYear">
+              </div>        
+              
+              <div class="form-group col-sm-2">
+                <label>CVC Code</label>
+                <input type="text" name="cvc" class="form-control" id="cvc">
+              </div>
+    
+                <button type="submit" class="btn btn-primary btn-lrg pull-left">Pay Now</button>  
+                <label>By clicking the "Pay Now" button you are bound by the Cardholder Agreement.</label>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- end checkout container -->
+</div><!-- end main container -->
+
+<!-- end Checkout page -->
+
+<footer>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <h6>Copyright &copy; 2014 MS Consulting</h6>
+        </div><!--end col-sm-2 -->
+
+        <div class="col-sm-2">
+          <h6>Navigation</h6>
+            <ul class="unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Menu &amp; Order</a></li>
+            </ul>
+        </div><!--end col-sm-2-->
+
+        <div class="col-sm-4">
+          <h6>Follow Us</h6>
+            <ul class="unstyled">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Google Plus</a></li>
+            </ul>
+          </div><!--end col-sm-2-->
+
+        <div class="col-sm-2">
+          <h6>Approved <span class="glyphicon glyphicon-thumbs-up"></span> by Mashhood</h6>
+        </div><!--end col-sm-2-->
+      </div><!--end row-->
+    
+</footer>
+
+<!-- First try for the online version of jQuery-->
+  <script src="http://code.jquery.com/jquery.js"></script>
+  
+  <!-- If no online access, fallback to our hardcoded version of jQuery -->
+  <script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+  
+  <!-- Bootstrap JS -->
+  <script src="bootstrap3.3.1/js/bootstrap.min.js"></script>
+  
+  <!-- Custom JS -->
+  <script src="includes/js/script.js"></script>
+  <script src="http://imsky.github.com/holder/holder.js"></script>
+
+
+</body>
+</html>
