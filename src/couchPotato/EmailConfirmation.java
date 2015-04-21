@@ -35,7 +35,7 @@ public class EmailConfirmation {
 		
 		//4 - send the message
 		Transport transport = session.getTransport();
-		transport.connect("cs605782", "hopkins2134");
+		transport.connect("login", "password");
 		transport.sendMessage(message, message.getAllRecipients());
 		transport.close();
 		
